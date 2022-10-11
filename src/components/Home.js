@@ -20,12 +20,7 @@ const Home = () => {
                 </div>
                 and many more.... </p>
 
-            <div>  <Player
-                src='https://assets2.lottiefiles.com/packages/lf20_inti4oxf.json'
-                className="player h-96 w-96"
-                loop
-                autoplay
-            /></div>
+            <div>  </div>
 
 
             <p className='text-3xl my-16 max-w-xl mx-auto px-4'>Let Our Journey Begin</p>
