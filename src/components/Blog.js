@@ -6,7 +6,12 @@ const Blog = () => {
         <div className='mx-auto'>
             <div>
                 <div>
-
+                    <Player
+                        src='https://assets10.lottiefiles.com/packages/lf20_k27t2gov.json'
+                        className="player"
+                        loop
+                        autoplay
+                    />
                 </div>
                 <div>
                     <p class="mb-3 font-light text-slate-800 dark:text-slate-800 text-xl md:text-5xl"><svg aria-hidden="true" className="w-10 h-10 text-gray-400 dark:text-gray-600 mx-20" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor" /></svg>What is the purpose of <strong class="font-semibold text-gray-900 dark:text-slate-800">react router</strong>?</p>
