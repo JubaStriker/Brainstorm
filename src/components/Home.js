@@ -1,12 +1,12 @@
 import React from 'react';
-import { SiCss3, SiGit, SiGithub, SiJavascript, SiReact } from 'react-icons/si'
+import { SiCss3, SiGithub, SiJavascript, SiReact } from 'react-icons/si'
 
 const Home = () => {
     return (
         <div>
             <h1 className='text-6xl mt-16 mb-16 '>Welcome to <span className='font-mono font-medium'>BRAINSTORM</span></h1>
 
-            <p className='max-w-xl mx-auto my-10 text-xl'>An interactive website to learn new information and to sharpen your previous memory on
+            <p className='max-w-sm md:max-w-xl mx-auto my-10 text-xl'>An interactive website to learn new information and to sharpen your previous memory on
                 <div className='flex justify-center space-x-3'> <SiReact className='my-1' />
                     <p> React, </p>
                     <SiJavascript className='my-1' />

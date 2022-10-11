@@ -12,7 +12,7 @@ const Quiz = () => {
 
     return (
         <div >
-            <h1 className='text-6xl mb-16'>Select Your Desire Quiz</h1>
+            <h1 className='text-6xl mb-16'>Select Your Desired Quiz</h1>
             <div className='flex justify-center'><div className='topic-card' >
                 {topics.map(topic => <TopicCard key={topic.id} topic={topic}></TopicCard>)}
             </div></div>
