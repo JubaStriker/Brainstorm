@@ -7,20 +7,32 @@ const QnApage = ({ question }) => {
 
 
     const [open, setOpen] = useState(false);
-    const [match, setMatch] = useState(false)
-
-    const [attempts, setAttempts] = useState(0)
+    const [match, setMatch] = useState(0);
 
 
     const checkAns = (selected, correct) => {
         if (selected === correct) {
-            setMatch(!correctAns)
-
-
-            setAttempts(attempts + 1)
+            if (match === 0) {
+                setMatch(match + 1)
+            }
+            if (match === 1) {
+                setMatch(match + 0)
+            }
+            if (match === 2) {
+                setMatch(match - 1)
+            }
         }
         else {
-            setAttempts(attempts + 1)
+            if (match === 0) {
+                setMatch(match + 2)
+            }
+            if (match === 1) {
+                setMatch(match + 1)
+            }
+            if (match === 2) {
+                setMatch(match - 0)
+            }
+
         }
     }
 
@@ -31,10 +43,14 @@ const QnApage = ({ question }) => {
 
     let toast;
 
-    if (match) {
-
-        toast = <p>Your Answer is Correct</p>
-
+    if (match === 1) {
+        toast = <p className='text-green-600 font-medium text-lg '>Your Answer is Correct.</p>
+    }
+    if (match === 2) {
+        toast = <p className='text-red-600 font-medium text-lg '>Your Answer is wrong!!!</p>
+    }
+    if (match === 0) {
+        toast = <p ></p>
     };
 
     return (
