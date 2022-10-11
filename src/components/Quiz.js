@@ -8,7 +8,7 @@ const Quiz = () => {
 
     const quizData = useLoaderData();
     const topics = quizData.data;
-    console.log(topics);
+
 
 
 

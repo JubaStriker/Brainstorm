@@ -6,6 +6,7 @@ import { AiOutlineEye } from 'react-icons/ai';
 const QnApage = ({ question }) => {
 
 
+
     const [open, setOpen] = useState(false);
     const [match, setMatch] = useState(0);
 
@@ -64,7 +65,7 @@ const QnApage = ({ question }) => {
                     </div>
                 </div>
                 <div>
-                    {question.options.map(option => <div>
+                    {question.options.map(option => <div key={option.toString()}>
                         <p onClick={() => checkAns(option, question.correctAnswer)}
                             className="font-normal text-slate-900-700 block p-6 max-w-lg  bg-sky-100 rounded-lg border hover:bg-sky-300 shadow-md hover:bg-gray-100 mx-auto my-5 "> {option}</p>
                     </div>)}
