@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Main from './components/Main';
 import Stat from './components/Stat';
 import Quiz from './components/Quiz';
+import QnA from './components/QnA';
 
 
 
@@ -34,8 +35,15 @@ function App() {
       },
       {
         path: 'quiz',
-        loader:()=> fetch('https://openapi.programming-hero.com/api/quiz'),
+        loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
         element: <Quiz />
+      },
+      {
+        path: 'quiz/:quizID',
+        loader: async ({ params }) => {
+          return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizID}`)
+        },
+        element: <QnA />
       }
       ]
     }
