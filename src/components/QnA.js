@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { MarksContext } from './NavBar';
 import QnApage from './QnApage';
 
 const QnA = () => {
     const qna = useLoaderData();
 
+
     const { data } = qna;
-    // console.log(data.questions);
+
 
     return (
         <div>
@@ -18,9 +20,13 @@ const QnA = () => {
             </h1>
 
             <div>
-                {data.questions.map(question => <QnApage key={question.id} question={question}></QnApage>)}
+                {data.questions.map(question => <QnApage key={question.id} question={question}
+                ></QnApage>)}
 
             </div>
+            <div></div>
+
+
         </div>
     );
 };

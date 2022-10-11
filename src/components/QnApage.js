@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { AiOutlineEye } from 'react-icons/ai';
+
+
 
 const QnApage = ({ question }) => {
 
+
     const [open, setOpen] = useState(false);
     const [match, setMatch] = useState(false)
-    const [marks, setMarks] = useState(0);
+
     const [attempts, setAttempts] = useState(0)
 
 
     const checkAns = (selected, correct) => {
         if (selected === correct) {
             setMatch(!correctAns)
-            setMarks(marks + 1)
+
+
             setAttempts(attempts + 1)
         }
         else {
@@ -55,8 +59,7 @@ const QnApage = ({ question }) => {
 
             </div>
 
-            <div>Marks : {marks}</div>
-            <div>Attempts: {attempts}</div>
+
         </div>
     );
 };
