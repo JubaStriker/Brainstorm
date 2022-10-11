@@ -7,6 +7,7 @@ import Main from './components/Main';
 import Stat from './components/Stat';
 import Quiz from './components/Quiz';
 import QnA from './components/QnA';
+import ErrorPage from './components/ErrorPage';
 
 
 
@@ -17,6 +18,7 @@ function App() {
     {
       path: '/',
       element: <Main />,
+      errorElement: <ErrorPage />,
       children: [{
         path: 'blog',
         element: <Blog />
@@ -31,6 +33,7 @@ function App() {
       },
       {
         path: 'stat',
+        loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
         element: <Stat />
       },
       {
