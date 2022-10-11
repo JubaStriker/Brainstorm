@@ -1,5 +1,5 @@
 import { Link, useRouteError } from 'react-router-dom';
-import { Player } from '@lottiefiles/react-lottie-player';
+
 
 
 const ErrorPage = () => {

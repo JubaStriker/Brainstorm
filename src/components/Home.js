@@ -1,7 +1,7 @@
 import React from 'react';
 import { SiCss3, SiGithub, SiJavascript, SiReact } from 'react-icons/si'
 import { Link } from 'react-router-dom';
-import { Player } from '@lottiefiles/react-lottie-player';
+
 
 const Home = () => {
     return (

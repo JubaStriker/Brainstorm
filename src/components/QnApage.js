@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineEye } from 'react-icons/ai';
-import { Player } from '@lottiefiles/react-lottie-player';
+
 
 
 
