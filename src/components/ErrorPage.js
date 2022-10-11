@@ -1,12 +1,31 @@
-import React from 'react';
+
 import { Link, useRouteError } from 'react-router-dom';
+
+import { Player } from '@lottiefiles/react-lottie-player';
+
 
 const ErrorPage = () => {
     const error = useRouteError();
+
+
+
+
+
     return (
-        <div className='flex flex-col min-h-[700px] justify-center items-center'>
-            <h1 className='text-4xl'>Ops! An Error Ocurred!</h1>
+        <div className='flex flex-col min-h-[700px] justify-center items-center mb-20'>
+            <h1 className='text-4xl mt-10'>Ops! An Error Ocurred!</h1>
             <br />
+
+            <Player
+                src='https://assets10.lottiefiles.com/packages/lf20_pNx6yH.json'
+                className="player"
+                loop
+                autoplay
+            />
+
+
+
+
             {error && (
                 <div>
                     <p className='text-red-500'>{error.statusText || error.message}</p>

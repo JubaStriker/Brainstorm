@@ -1,5 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { AiOutlineEye } from 'react-icons/ai';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 
 
@@ -39,16 +40,30 @@ const QnApage = ({ question }) => {
 
     let correctAns;
     if (open) {
-        correctAns = <p className="font-normal text-slate-900-700 block p-6 max-w-xl  bg-green-300 rounded-lg border hover:bg-green-500 shadow-md hover:bg-gray-100 mx-auto my-5 "> {question.correctAnswer}</p>
+        correctAns = <p className="font-normal text-slate-900-700 block p-6 max-w-xl  bg-green-300 rounded-lg border hover:bg-green-500 shadow-md hover:bg-gray-100 mx-auto my-5 ">
+            Correct answer is : <span className='text-lg'>{question.correctAnswer}</span></p>
     }
 
     let toast;
 
     if (match === 1) {
-        toast = <p className='text-green-600 font-medium text-lg '>Your Answer is Correct.</p>
+        toast = <p className='text-green-600 font-medium text-lg '>Your Answer is Correct.
+            <Player
+                src='https://assets8.lottiefiles.com/packages/lf20_9aa9jkxv.json'
+                className="player h-10 w-10"
+                loop
+                autoplay
+            /></p>
     }
     if (match === 2) {
-        toast = <p className='text-red-600 font-medium text-lg '>Your Answer is wrong!!!</p>
+        toast = <p className='text-red-600 font-medium text-lg '>Your Answer is wrong!!!
+            <Player
+                src='https://assets2.lottiefiles.com/packages/lf20_j3yti031.json'
+                className="player h-10 w-10"
+                loop
+                autoplay
+            />
+        </p>
     }
     if (match === 0) {
         toast = <p ></p>

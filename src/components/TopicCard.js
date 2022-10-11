@@ -16,6 +16,7 @@ const TopicCard = ({ topic }) => {
 						<Link to={`/quiz/${topic.id}`}>Start Quiz</Link>
 
 					</button>
+					<div>Total Questions : {topic.total}</div>
 				</div>
 			</div>
 		</div>

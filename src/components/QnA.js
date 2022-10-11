@@ -12,7 +12,7 @@ const QnA = () => {
         <div>
             <h1 className='flex justify-center items-center gap-2'>
                 <div className='bg-slate-400 rounded-md'><img src={data.logo} alt="" height={100} width={100} /></div>
-                <div><p className="text-5xl font-extrabold text-slate-800">{data.name}</p>
+                <div className='grid justify-items-start'><p className="text-5xl font-extrabold text-slate-800">{data.name}</p>
                     <p className='text-sm mt-2'>How much do you know about it?</p>
                 </div>
             </h1>

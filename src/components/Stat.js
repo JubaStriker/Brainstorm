@@ -1,14 +1,14 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
-const data1 = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
+
 
 
 const Stat = () => {
 
     const loadedData = useLoaderData()
     const data = loadedData.data
-    console.log(data1);
+
     return (
         <div>
             <h1 className='text-center text-3xl m-10'>Overview of the number of the questions per quiz</h1>
