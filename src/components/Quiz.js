@@ -2,13 +2,10 @@ import { useLoaderData } from 'react-router-dom';
 import TopicCard from './TopicCard';
 import './Styles/Quiz.css'
 
-
 const Quiz = () => {
 
     const quizData = useLoaderData();
     const topics = quizData.data;
-
-
 
 
     return (
