@@ -1,6 +1,7 @@
 import React from 'react';
 import { SiCss3, SiGithub, SiJavascript, SiReact } from 'react-icons/si'
 import { Link } from 'react-router-dom';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 
 const Home = () => {
@@ -20,7 +21,12 @@ const Home = () => {
                 </div>
                 and many more.... </p>
 
-            <div>  </div>
+            <div> <Player
+                src='https://assets8.lottiefiles.com/packages/lf20_hxart9lz.json'
+                className="player h-96 w-96"
+                loop
+                autoplay
+            /> </div>
 
 
             <p className='text-3xl my-16 max-w-xl mx-auto px-4'>Let Our Journey Begin</p>
