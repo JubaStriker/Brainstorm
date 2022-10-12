@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineEye } from 'react-icons/ai';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 const QnApage = ({ question }) => {
 
@@ -41,13 +42,26 @@ const QnApage = ({ question }) => {
 
     let toast;
 
+
     if (match === 1) {
-        toast = <p className='text-green-600 font-medium text-lg '>Your Answer is Correct.</p>
+        toast = <p className='text-green-600 font-medium text-lg flex justify-center'>Your Answer is Correct.
+            <Player
+                src='https://assets3.lottiefiles.com/packages/lf20_9aa9jkxv.json'
+                className="player h-8 w-8"
+                loop
+                autoplay
+            /></p>
+
 
     }
     if (match === 2) {
-        toast = <p className='text-red-600 font-medium text-lg '>Your Answer is wrong!!!
-
+        toast = <p className='text-red-600 font-medium text-lg flex justify-center'>Your Answer is wrong!!!
+            <Player
+                src='https://assets3.lottiefiles.com/packages/lf20_j3yti031.json'
+                className="player h-8 w-8"
+                loop
+                autoplay
+            />
         </p>
     }
     if (match === 0) {
