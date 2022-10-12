@@ -12,8 +12,9 @@ const TopicCard = ({ topic }) => {
 						<h2 className="text-3xl font-semibold tracking-wide">{topic.name}</h2>
 
 					</div>
-					<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 text-gray-900">
-						<Link to={`/quiz/${topic.id}`}>Start Quiz</Link>
+					<button >
+						<Link to={`/quiz/${topic.id}`}
+							className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 text-gray-900">Start Quiz</Link>
 
 					</button>
 					<div>Total Questions : {topic.total}</div>
