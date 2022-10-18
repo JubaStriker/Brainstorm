@@ -4,6 +4,11 @@ import { Player } from '@lottiefiles/react-lottie-player';
 
 const QnApage = ({ question }) => {
 
+    const htmlQues = question.question;
+    console.log(htmlQues);
+    const strQuestion = htmlQues.replace(/(<([^>]+)>)/ig, '');
+    console.log(strQuestion);
+
     const [open, setOpen] = useState(false);
     const [match, setMatch] = useState(0);
 
@@ -74,7 +79,7 @@ const QnApage = ({ question }) => {
 
                 <div className="block p-6 max-w-2xl bg-teal-100 rounded-lg border border-gray-200 shadow-md hover:bg-teal-300 mx-auto my-5">
                     <div className='flex justify-between gap-4'>
-                        <p className="font-medium font-serif text-lg text-slate-900-700">{question.question} </p>
+                        <p className="font-medium font-serif text-lg text-slate-900-700">{strQuestion} </p>
                         <button onClick={() => setOpen(!open)} title='click to see correct answer'><AiOutlineEye /></button>
                     </div>
                 </div>
